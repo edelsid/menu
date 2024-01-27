@@ -5,7 +5,7 @@ function Menu() {
   const navName = ({ isActive }) => (isActive ? "menu__item menu__item-active" : "menu__item");
   return (
     <nav className="menu">
-      <NavLink to="/" className={navName}>Главная</NavLink>
+      <NavLink to="/menu" className={navName}>Главная</NavLink>
       <NavLink to="/drift" className={navName}>Дрифт-такси</NavLink>
       <NavLink to="/timeattack" className={navName}>Time Attack</NavLink>
       <NavLink to="/forza" className={navName}>Forza Karting</NavLink>
@@ -88,7 +88,7 @@ export function App() {
       <Menu />
       <div className="page">
         <Routes>
-          <Route path="/" exact element={<HomePage/>} />
+          <Route path="/menu" exact element={<HomePage/>} />
           <Route path="/drift" element={<DriftPage/>} />
           <Route path="/timeattack" element={<TimeAttackPage/>} />
           <Route path="/forza" element={<ForzaPage/>} />
